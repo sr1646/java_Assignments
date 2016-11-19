@@ -1,0 +1,26 @@
+package rcc.java.examples;
+import java.util.*;
+
+public class MapExample{
+  public static void main(String args[]){
+      Map<String,String> employee=new HashMap<String,String>();
+      employee.put("firstname","sandip");
+      employee.put("lastname","patel");
+      employee.put("id","1");
+      employee.put("department","development");
+      System.out.println(employee);
+	  System.out.println(employee.get("firstname")+" "+employee.get("lastname")+" "+employee.get("salary"));//salary return null
+	  print(employee);
+  }
+	public static void print(Map map){
+			/*System.out.println(map.get("firstname"));
+			System.out.println(map.get("lastname"));
+			System.out.println(map.get("id"));
+			System.out.println(map.get("department"));*/
+			Set<Map.Entry> entrySet=map.entrySet();
+			//Set<Map.Entry> entrySet
+			for(Map.Entry e:entrySet){
+				System.out.println(e.getKey()+" ====> "+e.getValue());
+			}
+	}
+}
